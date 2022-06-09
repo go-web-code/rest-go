@@ -3,7 +3,7 @@ package routes
 import (
 	"net/http"
 
-	"github.com/go-web-code/rest-go/handlers"
+	"github.com/go-web-code/rest-go/todo"
 	"github.com/gorilla/mux"
 )
 
@@ -28,5 +28,5 @@ func SetupRouter() *mux.Router {
 }
 
 var routes = Routes{
-	Route{"Index", "Get", "/", handlers.IndexHandler},
+	Route{"Index", "Get", "/", todo.ListTodoHandler},
 }
